@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+
+.panel_Izquierdo {
+    position: relative;
+    background: #0976a8;
+    padding: 40px;
+}
+
+.panel_Derecho {
+    position: relative;
+    background:  #fff;
+    padding: 40px;
+}
+
+.perfil_Texto {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.perfil_Texto h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.perfil_Texto h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.imgCV {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imgCV img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.infContacto {
+    padding-top: 40px;
+}
+
+.infContacto ul {
+    position: relative;
+    
+}
+
+.infContacto ul li {
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    margin: 10px 0;
+
+}
+
+.infContacto ul li .icon {
+    display: inline-block;
+    width:20px;
+    font-size: 18px;
+    color: #03a9f4;    
+
+}
+
+.infContacto ul li span {
+    color: white;
+    font-weight: 300;
+}
+
+.titulo {
+    color : white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.infContacto.Educacion li {
+    margin-bottom: 15px;
+}
+
+.infContacto.Educacion h5 {
+    color:#03a9f4;
+    font-weight: 500;
+
+}
+
+.infContacto.Educacion h4 {
+    color: white;
+    font-weight: 300;
+}
+
+.infContacto.Educacion h4:nth-child(2) {
+    color: white;
+    font-weight: 500;
+}
+
+.infContacto.Lenguajes .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+
+.infContacto.Lenguajes .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.Resumen {
+    margin-bottom: 50px;
+}
+
+.Resumen:last-child {
+    margin-bottom: 0;
+}
+
+.titulo02 {
+    color: #003147;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #333;
+}
+
+.Resumen .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.Resumen .box .empresa_año {
+    min-width: 150px;
+
+}
+
+.Resumen .box .empresa_año h5 {
+    color: #848c90;
+    font-weight: 600;
+}
+
+.Resumen .box .texto h4{
+    color: #2a7da2;
+    font-size: 16px;
+
+}
+
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skills .box h4 {
+    color: #848c99;
+    font-weight: 500;
+
+}
+
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+
+}
+
+.skills .box .percent div {
+    position: absolute;   
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+@media screen and (max-width:1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .Resumen .box {
+        flex-direction: column;
+    }
+    .Resumen .box .empresa_año {
+        margin-bottom: 5px;
+    }
+    .skills .box {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
